@@ -53,31 +53,6 @@ public class CustomerService implements InboundPort {
                 new CustomerUpdatedEvent(getNextMessageId(), getNextEventId(), customerId));
     }
 
-    @Transactional
-    public void handleOrderCharged(final OrderChargedEvent orderChargedEvent) {
-        LOGGER.info("The order with the ID {} of the customer {} was successfully charged, updating it",
-                orderChargedEvent.getOrderId(), orderChargedEvent.getCustomerId());
-
-        // TODO insert magic here
-    }
-
-    @Transactional
-    public void handleOrderNotCharged(final OrderNotChargedEvent orderNotChargedEvent) {
-        LOGGER.warn("The order with the ID {} of the customer {} could not be charged - reason: '{}'",
-                orderNotChargedEvent.getOrderId(), orderNotChargedEvent.getCustomerId(), orderNotChargedEvent.getReason());
-
-        // TODO insert magic here
-    }
-
-    @Transactional
-    public void handleOrderShipped(final OrderShippedEvent orderShippedEvent) {
-        final long customerId = orderShippedEvent.getCustomerId();
-        final long orderId = orderShippedEvent.getOrderId();
-        LOGGER.info("The order with the ID {} of the customer {} was successfully shipped!", orderId, customerId);
-
-        // TODO insert any further magic here
-    }
-
     private void updateCustomer(long customerId) {
         // TODO insert magic here
         sleepALittle();
@@ -86,6 +61,7 @@ public class CustomerService implements InboundPort {
     private long getNextMessageId() {
         return new Random(900000).nextLong();
     }
+
     private long getNextEventId() {
         // returned from the saved database event, before sending it (using transactional messaging)
         return new Random(900000).nextLong();
