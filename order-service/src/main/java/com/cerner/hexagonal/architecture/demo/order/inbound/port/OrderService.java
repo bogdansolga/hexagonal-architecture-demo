@@ -1,11 +1,11 @@
-package com.cerner.hexagonal.architecture.demo.order.service;
+package com.cerner.hexagonal.architecture.demo.order.inbound.port;
 
 import com.cerner.hexagonal.architecture.demo.order.domain.model.Order;
 import com.cerner.hexagonal.architecture.demo.order.dto.OrderDTO;
-import com.cerner.hexagonal.architecture.demo.order.marker.port.InboundPort;
+import com.cerner.hexagonal.architecture.demo.order.outbound.port.InboundPort;
 import com.cerner.hexagonal.architecture.demo.order.message.event.CustomerUpdatedEvent;
 import com.cerner.hexagonal.architecture.demo.order.message.event.OrderCreatedEvent;
-import com.cerner.hexagonal.architecture.demo.order.ports.MessagingOutboundPort;
+import com.cerner.hexagonal.architecture.demo.order.outbound.port.MessagingOutboundPort;
 import com.cerner.hexagonal.architecture.demo.order.message.command.CreateOrderCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,16 +1,18 @@
-package com.cerner.hexagonal.architecture.demo.customer.adapters;
+package com.cerner.hexagonal.architecture.demo.customer.outbound.adapter;
 
 import com.cerner.hexagonal.architecture.demo.customer.channels.OutboundChannels;
+import com.cerner.hexagonal.architecture.demo.customer.marker.adapter.OutboundAdapter;
 import com.cerner.hexagonal.architecture.demo.customer.messages.event.CustomerCreatedEvent;
 import com.cerner.hexagonal.architecture.demo.customer.messages.event.CustomerUpdatedEvent;
-import com.cerner.hexagonal.architecture.demo.customer.ports.MessagingOutboundPort;
+import com.cerner.hexagonal.architecture.demo.customer.outbound.port.MessageCreator;
+import com.cerner.hexagonal.architecture.demo.customer.outbound.port.MessagingOutboundPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.stereotype.Component;
 
 @Component
 @EnableBinding(OutboundChannels.class)
-public class MessageProducer implements MessagingOutboundPort {
+public class MessageProducer implements MessagingOutboundPort, OutboundAdapter {
 
     private final OutboundChannels outboundChannels;
 

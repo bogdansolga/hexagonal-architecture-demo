@@ -1,6 +1,6 @@
 package com.cerner.hexagonal.architecture.demo.order;
 
-import com.cerner.hexagonal.architecture.demo.order.adapters.MessageCreator;
+import com.cerner.hexagonal.architecture.demo.order.outbound.MessageCreator;
 import com.cerner.hexagonal.architecture.demo.order.channels.InboundChannels;
 import com.cerner.hexagonal.architecture.demo.order.message.command.CreateOrderCommand;
 import org.springframework.boot.ApplicationRunner;

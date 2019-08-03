@@ -1,8 +1,7 @@
-package com.cerner.hexagonal.architecture.demo.order.adapters;
+package com.cerner.hexagonal.architecture.demo.order.inbound.adapter;
 
 import com.cerner.hexagonal.architecture.demo.order.channels.InboundChannels;
-import com.cerner.hexagonal.architecture.demo.order.marker.adapter.InboundAdapter;
-import com.cerner.hexagonal.architecture.demo.order.service.OrderService;
+import com.cerner.hexagonal.architecture.demo.order.inbound.port.OrderService;
 import com.cerner.hexagonal.architecture.demo.order.message.command.CreateOrderCommand;
 import com.cerner.hexagonal.architecture.demo.order.message.event.CustomerUpdatedEvent;
 import org.slf4j.Logger;

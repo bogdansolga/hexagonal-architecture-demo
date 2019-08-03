@@ -1,4 +1,4 @@
-package com.cerner.hexagonal.architecture.demo.order.adapters;
+package com.cerner.hexagonal.architecture.demo.order.outbound;
 
 import com.cerner.hexagonal.architecture.demo.order.message.AbstractMessage;
 import org.springframework.messaging.Message;

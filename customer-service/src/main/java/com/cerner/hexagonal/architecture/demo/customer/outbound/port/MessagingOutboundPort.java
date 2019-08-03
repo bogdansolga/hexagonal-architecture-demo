@@ -1,4 +1,4 @@
-package com.cerner.hexagonal.architecture.demo.customer.ports;
+package com.cerner.hexagonal.architecture.demo.customer.outbound.port;
 
 import com.cerner.hexagonal.architecture.demo.customer.marker.port.OutboundPort;
 import com.cerner.hexagonal.architecture.demo.customer.messages.event.CustomerCreatedEvent;

@@ -1,9 +1,9 @@
-package com.cerner.hexagonal.architecture.demo.customer.service;
+package com.cerner.hexagonal.architecture.demo.customer.inbound.port;
 
 import com.cerner.hexagonal.architecture.demo.customer.dto.CustomerDTO;
 import com.cerner.hexagonal.architecture.demo.customer.marker.port.InboundPort;
 import com.cerner.hexagonal.architecture.demo.customer.messages.event.*;
-import com.cerner.hexagonal.architecture.demo.customer.ports.MessagingOutboundPort;
+import com.cerner.hexagonal.architecture.demo.customer.outbound.port.MessagingOutboundPort;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

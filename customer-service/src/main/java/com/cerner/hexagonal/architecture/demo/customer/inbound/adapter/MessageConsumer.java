@@ -1,6 +1,6 @@
-package com.cerner.hexagonal.architecture.demo.customer.adapters;
+package com.cerner.hexagonal.architecture.demo.customer.inbound.adapter;
 
-import com.cerner.hexagonal.architecture.demo.customer.service.CustomerService;
+import com.cerner.hexagonal.architecture.demo.customer.inbound.port.CustomerService;
 import com.cerner.hexagonal.architecture.demo.customer.channels.InboundChannels;
 import com.cerner.hexagonal.architecture.demo.customer.marker.adapter.InboundAdapter;
 import com.cerner.hexagonal.architecture.demo.customer.messages.event.OrderChargedEvent;
